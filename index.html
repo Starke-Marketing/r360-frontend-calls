@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Test Page</title>
+
+    <style>
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+            color: rgb(64, 64, 64);
+            text-align: justify;
+            line-height: 1.8em;
+        }
+
+        body {
+            padding: 0 100px;
+        }
+
+        .button {
+            background-color: rgb(135, 177, 179);
+            padding: 10px;
+            text-decoration: none;
+            color: rgb(248, 211, 211);
+        }
+        code {
+            background-color: #000;
+            padding: 3px 10px;
+            border-radius: 3px;
+            color: rgb(236, 196, 17);
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h3>r360.successionadvisors.com</h3>
+    <h4>These are just examples of how to use the <code>calls.js</code> file</h3>
+
+    <h3>Auto Login</h3>
+    <h4>Try clicking this button, for example</h4>
+    <div>
+        <a href="#!" class="button login-button" data-identifier="e.alfonsopedroza58@gmail.com">Auto Login Button</a>
+    </div>
+    <h4>To get a button working like that, just add the class <code>login-button</code> and the attribute <code>data-identifier="{dynamic-identifier}"</code> to any clickable HTML element. Where <code>{dynamic-identifier}</code> is a valid user identifier (you choose what to use here).</h4>
+
+    <h4>IF the identifier you choose to use is a valid email address, AND the user does not have an associated account on the platform, it will automatically create an account and link it to the email address provided and then perform the auto login.</h4>
+
+    <hr>
+
+    <h4>
+        Now to programatically signup a new user onto the r360.successionadvisors.com platform, just add the class <code>signup-form</code> and the attribute <code>data-identifier="{dynamic-identifier}"</code> to the form that performs the registration on your platform.
+    </h4>
+
+    <!-- Load the script from jsDelivr CDN -->
+    <script src="calls.min.js"></script>
+
+</body>
+</html>
