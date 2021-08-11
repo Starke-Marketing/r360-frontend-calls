@@ -18,7 +18,7 @@
             padding: 0 100px;
         }
 
-        .button {
+        .login-button {
             background-color: rgb(135, 177, 179);
             padding: 10px;
             text-decoration: none;
@@ -48,16 +48,32 @@
     <h3>Auto Login</h3>
     <h4>Try clicking this button, for example</h4>
     <div>
-        <a href="#!" class="button login-button" data-identifier="development@wearestarke.com">Auto Login Button</a>
+        <a href="#" class="login-button" data-memberid="1" data-email="development@wearestarke.com">Auto Login Button</a>
     </div>
-    <h4>To get a button working like that, just add the class <code>login-button</code> and the attribute <code>data-identifier="{dynamic-identifier}"</code> to any clickable HTML element. Where <code>{dynamic-identifier}</code> is a valid user identifier (you choose what to use here).</h4>
+    <h4>To get a button working like that, you'll need something like this:</h4>
 
-    <h4>IF the identifier you choose to use is a valid email address, AND the user does not have an associated account on the platform, it will automatically create an account and link it to the email address provided and then perform the auto login.</h4>
+    <code>
+        &lt;a href="#" class="login-button" data-memberid="1" data-email="dummy@email.com"&gt;Auto Login Button&lt;/a&gt;
+    </code>
+
+    <h4>Where <code>data-memberid</code> is the Member ID from your Webflow platform and <code>data-email</code> is the current user email address.</h4>
+    <ul>
+        <li>
+            <h4>If there is no user account associated with that Member ID, the platform will create one for it and then perform the auto login.</h4>
+        </li>
+        <li>
+            <h4>If a user account associated with that Member ID exists but the user's email address is different from the one that the platform has, the platform will update said information and then perform the auto login.</h4>
+        </li>
+        <li>
+            <h4>If a user account associated with that Member ID exists and the email address is the same, the platform will not make any changes and perform the auto login</h4>
+        </li>
+    </ul>
+    
 
     <hr>
 
     <h4>
-        Now to programatically signup a new user onto the r360.successionadvisors.com platform, just add the class <code>signup-form</code> and the attribute <code>data-identifier="{dynamic-identifier}"</code> to the form that performs the registration on your platform.
+        Programatically signup is currently disabled.
     </h4>
 
     <!-- Load the script from jsDelivr CDN -->
