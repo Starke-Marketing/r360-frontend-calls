@@ -3,8 +3,7 @@ const apiBaseURI = `https://r360.successionadvisors.com`;
 const publicKey = "exlpGzluuIw4FgkMGFg8kR9ouACJgKvf";
 
 window.onload = () => {
-    const loginButton = document.querySelector(".login-button");
-    const signUpForm = document.querySelector(".signup-form");
+    const loginButton = document.getElementById("#r360-login-button");
 
     if (loginButton) {
       const member_id = loginButton.getAttribute("data-memberid");
