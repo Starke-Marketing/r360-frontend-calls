@@ -1,4 +1,3 @@
-const domain = window.location.hostname;
 const apiBaseURI = `https://r360.successionadvisors.com`;
 const publicKey = "exlpGzluuIw4FgkMGFg8kR9ouACJgKvf";
 
