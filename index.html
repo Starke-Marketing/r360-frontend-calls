@@ -18,7 +18,7 @@
             padding: 0 100px;
         }
 
-        #r360-login-button {
+        .r360-login-button {
             background-color: rgb(8 159 166);
             padding: 10px;
             text-decoration: none;
@@ -48,12 +48,12 @@
     <h3>Auto Login</h3>
     <h4>Try clicking this button, for example</h4>
     <div>
-        <a href="#" id="r360-login-button" data-memberid="768987690" data-email="ihopeisthelastone@mailer.com">Auto Login Button</a>
+        <a href="#" class="r360-login-button" data-memberid="768987690" data-email="ihopeisthelastone@mailer.com">Auto Login Button</a>
     </div>
     <h4>To get a button working like that, you'll need something like this:</h4>
 
     <code>
-        &lt;a href="#" id="r360-login-button" data-memberid="1" data-email="dummy@email.com"&gt;Auto Login Button&lt;/a&gt;
+        &lt;a href="#" class="r360-login-button" data-memberid="1" data-email="dummy@email.com"&gt;Auto Login Button&lt;/a&gt;
     </code>
 
     <h4>Where <code>data-memberid</code> is the Member ID from your Webflow platform and <code>data-email</code> is the current user email address.</h4>
@@ -68,13 +68,18 @@
             <h4>If a user account associated with that Member ID exists and the email address is the same, the platform will not make any changes and perform the auto login</h4>
         </li>
     </ul>
-    
-
     <hr>
-
-    <h4>
-        Programatically signup is currently disabled.
-    </h4>
+    <div class="div">
+        <h2>Update:</h2>
+        <p>
+            You can now have multiple buttons on the page, with the same or different user information, example:
+        </p>
+        <p>
+            <a href="#" class="r360-login-button" data-memberid="123456" data-email="starkedev@mailer.com">Another Auto Login Button
+            </a>
+        </p>
+    </div>
+    </div>
 
     <!-- Load the script from jsDelivr CDN -->
     <script src="calls.min.js"></script>
